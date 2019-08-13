@@ -1,9 +1,9 @@
 import {forEach} from "ramda";
-import {SendVideoMessage, SEND_VIDEO_MESSAGE} from "../messages/messages";
+import {SEND_VIDEO_MESSAGE} from "../messages/messages";
 import {wrap, htmlcollectionToArray, sendMessage} from "../content/utils/common"
 
 const onClick = (videoElement: HTMLVideoElement) => {
-  sendMessage({type: SEND_VIDEO_MESSAGE, data: {video: videoElement}})
+  sendMessage(videoElement)({type: SEND_VIDEO_MESSAGE})
 }
 
 function main () {

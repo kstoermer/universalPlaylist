@@ -1,5 +1,5 @@
 export interface Video {
-    id: Number,
-    name: String, 
-    tabName: String,
+    id: number,
+    name: string, 
+    tab: number,
 }

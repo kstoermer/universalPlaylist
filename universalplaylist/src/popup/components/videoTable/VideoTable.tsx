@@ -22,6 +22,10 @@ export class VideoTable extends React.Component <VideoTableProps, VideoTableStat
     }
   }
 
+  componentDidMount(){
+    console.log("mount")
+  }
+
   deleteVideo(id: Number){
     const videos = this.state.videos;
     this.setState({
