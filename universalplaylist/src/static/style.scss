@@ -1,0 +1,18 @@
+@import "bulma";
+
+body{
+  width: 500px;
+
+  .spacer{
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .button{
+    border-radius: 0;
+  
+    svg{
+      padding-left: 5px;
+    }
+  }
+}

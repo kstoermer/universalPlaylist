@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Video} from "../types/videoTable/videoTableTypes";
+import {Video} from "../../../types/videoTable/videoTableTypes";
 import {VideoEntry} from "./VideoEntry"
 import {remove, findIndex} from "ramda";
 
@@ -31,9 +31,10 @@ export class VideoTable extends React.Component <VideoTableProps, VideoTableStat
 
   render(){
     const videos: Array<Video> = this.state.videos;
-    console.log(videos)
 
-    return videos.map((video: Video) => <VideoEntry video={video} 
-                                                    deleteFunc={(id: Number) => this.deleteVideo(id)}/>);
+    return <div className="videoTable">
+      {videos.map((video: Video) => <VideoEntry video={video} 
+                                                deleteFunc={(id: Number) => this.deleteVideo(id)}/>)}
+    </div>
   }
 }

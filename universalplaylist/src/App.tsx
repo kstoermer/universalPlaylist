@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {Video} from "./types/videoTable/videoTableTypes"
-import {VideoTable} from "./videoTable/VideoTable"
+import {VideoTable} from "./popup/components/videoTable/VideoTable"
+import {Header} from "./popup/components/header/header";
+import {Spacer} from "./popup/components/common/Spacer";
 
 const testData: Array<Video> = [
     {id: 1, name: "Video 1", tabName: "tab1"},
@@ -11,9 +13,12 @@ const testData: Array<Video> = [
   ]
 
 const App: React.FC = () => {
-  return (
+  return <React.Fragment>
+    <Header/>
+    <Spacer/>dddddddd
     <VideoTable videos={testData}/>
-  );
+  </React.Fragment>
+  ;
 }
 
 export default App;
